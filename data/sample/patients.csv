@@ -1,0 +1,16 @@
+patient_id,first_name,last_name,date_of_birth,gender,state,insurance_plan
+P1001,Maria,Lopez,1975-03-12,F,CA,BlueCross PPO
+P1002,James,Walker,1968-11-04,M,TX,Aetna HMO
+P1003,Aisha,Khan,1989-07-22,F,NY,United EPO
+P1004,Liam,Nguyen,1992-01-18,M,CA,Cigna POS
+P1005,Patricia,Evans,1954-06-03,F,FL,Humana Medicare
+P1006,Noah,Chen,1981-09-28,M,WA,BlueCross PPO
+P1007,Sofia,Garcia,1970-12-09,F,TX,Aetna HMO
+P1008,Ethan,Brown,1998-04-16,M,CO,Kaiser HMO
+P1009,Olivia,Wilson,2001-10-11,F,NY,United EPO
+P1010,Daniel,Johnson,1985-02-27,M,IL,Cigna POS
+P1011,Ava,Robinson,1990-08-31,F,GA,BlueCross PPO
+P1012,Robert,Martin,1949-05-19,M,FL,Humana Medicare
+P1013,Grace,Lee,1979-07-07,F,WA,Aetna HMO
+P1014,Michael,Davis,1962-03-25,M,AZ,United EPO
+P1015,Emma,Moore,1987-12-14,F,OR,Kaiser HMO

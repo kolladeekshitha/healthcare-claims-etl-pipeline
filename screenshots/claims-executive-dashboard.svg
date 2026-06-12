@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="Healthcare claims executive dashboard mockup">
+  <rect width="1280" height="760" fill="#f6f8fb"/>
+  <rect x="40" y="34" width="1200" height="692" rx="18" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="72" y="86" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#1f2937">Healthcare Claims Executive Overview</text>
+  <text x="74" y="118" font-family="Inter, Arial, sans-serif" font-size="16" fill="#64748b">Gold layer metrics by month, geography, provider, and diagnosis category</text>
+
+  <g>
+    <rect x="72" y="150" width="250" height="118" rx="10" fill="#0f766e"/>
+    <text x="94" y="188" font-family="Inter, Arial, sans-serif" font-size="15" fill="#ccfbf1">Paid and Approved Amount</text>
+    <text x="94" y="232" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">$12.9M</text>
+  </g>
+  <g>
+    <rect x="344" y="150" width="250" height="118" rx="10" fill="#1d4ed8"/>
+    <text x="366" y="188" font-family="Inter, Arial, sans-serif" font-size="15" fill="#dbeafe">Claim Volume</text>
+    <text x="366" y="232" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">84,216</text>
+  </g>
+  <g>
+    <rect x="616" y="150" width="250" height="118" rx="10" fill="#7c3aed"/>
+    <text x="638" y="188" font-family="Inter, Arial, sans-serif" font-size="15" fill="#ede9fe">Denial Rate</text>
+    <text x="638" y="232" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">6.8%</text>
+  </g>
+  <g>
+    <rect x="888" y="150" width="280" height="118" rx="10" fill="#334155"/>
+    <text x="910" y="188" font-family="Inter, Arial, sans-serif" font-size="15" fill="#e2e8f0">Pending Exposure</text>
+    <text x="910" y="232" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">$1.4M</text>
+  </g>
+
+  <rect x="72" y="304" width="520" height="312" rx="12" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="96" y="344" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937">Monthly Claim Amount</text>
+  <line x1="112" y1="552" x2="548" y2="552" stroke="#cbd5e1"/>
+  <line x1="112" y1="386" x2="112" y2="552" stroke="#cbd5e1"/>
+  <polyline points="120,520 190,492 260,505 330,462 400,430 470,405 540,374" fill="none" stroke="#0f766e" stroke-width="5"/>
+  <circle cx="540" cy="374" r="7" fill="#0f766e"/>
+  <text x="112" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">Jan</text>
+  <text x="184" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">Feb</text>
+  <text x="254" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">Mar</text>
+  <text x="324" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">Apr</text>
+  <text x="394" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">May</text>
+  <text x="464" y="582" font-family="Inter, Arial, sans-serif" font-size="13" fill="#64748b">Jun</text>
+
+  <rect x="624" y="304" width="544" height="312" rx="12" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="648" y="344" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937">Spend by Diagnosis Category</text>
+  <rect x="654" y="390" width="382" height="30" rx="5" fill="#1d4ed8"/>
+  <rect x="654" y="438" width="318" height="30" rx="5" fill="#0f766e"/>
+  <rect x="654" y="486" width="250" height="30" rx="5" fill="#7c3aed"/>
+  <rect x="654" y="534" width="176" height="30" rx="5" fill="#f59e0b"/>
+  <text x="1050" y="412" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Chronic Care</text>
+  <text x="986" y="460" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Orthopedic</text>
+  <text x="918" y="508" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Cardiology</text>
+  <text x="844" y="556" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Respiratory</text>
+
+  <text x="72" y="674" font-family="Inter, Arial, sans-serif" font-size="15" fill="#64748b">Source: dbt gold marts built from fct_claims, provider_claims_summary, diagnosis_claims_summary, and monthly_claims_summary.</text>
+</svg>

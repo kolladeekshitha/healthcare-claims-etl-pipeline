@@ -1,0 +1,78 @@
+version: 2
+
+models:
+  - name: stg_claims
+    description: Cleaned raw claims with normalized data types.
+    columns:
+      - name: claim_id
+        tests:
+          - not_null
+          - unique
+      - name: patient_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_patients')
+              field: patient_id
+      - name: provider_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_providers')
+              field: provider_id
+      - name: diagnosis_code
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_diagnosis_codes')
+              field: diagnosis_code
+      - name: claim_amount
+        tests:
+          - not_null
+      - name: claim_status
+        tests:
+          - accepted_values:
+              values: ['approved', 'denied', 'pending', 'paid']
+
+  - name: stg_patients
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_providers
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_claims
+    description: Claim-level fact table enriched with provider and diagnosis dimensions.
+    columns:
+      - name: claim_id
+        tests:
+          - not_null
+          - unique
+      - name: claim_amount
+        tests:
+          - not_null
+
+  - name: claim_kpi_summary
+    description: Gold table with executive claims KPIs including denial rate, pending exposure, and out-of-network spend.
+
+  - name: network_claims_summary
+    description: Gold table for in-network and out-of-network approved and paid spend.
+
+  - name: provider_claims_summary
+    description: Gold table for provider-level claims analytics.
+
+  - name: state_claims_summary
+    description: Gold table for state-level claims analytics.
+
+  - name: diagnosis_claims_summary
+    description: Gold table for diagnosis-level claims analytics.
+
+  - name: monthly_claims_summary
+    description: Gold table for monthly trend reporting.

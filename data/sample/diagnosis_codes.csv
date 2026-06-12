@@ -1,0 +1,13 @@
+diagnosis_code,diagnosis_description,diagnosis_category
+E11.9,Type 2 diabetes mellitus without complications,Endocrine
+I10,Essential primary hypertension,Circulatory
+J45.909,Unspecified asthma uncomplicated,Respiratory
+M54.5,Low back pain,Musculoskeletal
+N18.3,Chronic kidney disease stage 3,Genitourinary
+E78.5,Hyperlipidemia unspecified,Endocrine
+S83.2,Tear of meniscus current injury,Injury
+J06.9,Acute upper respiratory infection unspecified,Respiratory
+F41.1,Generalized anxiety disorder,Mental Health
+O80,Encounter for full-term uncomplicated delivery,Pregnancy
+K21.9,Gastro-esophageal reflux disease without esophagitis,Digestive
+G43.909,Migraine unspecified not intractable,Neurological

@@ -1,0 +1,11 @@
+provider_id,provider_name,provider_type,npi,state,network_status
+PR2001,Pacific Family Clinic,Primary Care,1487654321,CA,in_network
+PR2002,Lone Star Cardiology,Specialist,1276543210,TX,in_network
+PR2003,Hudson Urgent Care,Urgent Care,1376509821,NY,out_of_network
+PR2004,Suncoast Nephrology,Specialist,1467890123,FL,in_network
+PR2005,Northwest Wellness,Primary Care,1556789012,WA,in_network
+PR2006,Rocky Mountain Orthopedics,Specialist,1645678901,CO,in_network
+PR2007,Chicago Behavioral Health,Specialist,1734567890,IL,in_network
+PR2008,Peachtree Women's Center,Hospital,1823456789,GA,in_network
+PR2009,Desert Digestive Care,Specialist,1912345678,AZ,out_of_network
+PR2010,Cascade Neurology,Specialist,1098765432,OR,in_network

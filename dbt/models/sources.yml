@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_claims
+    database: "{{ env_var('SNOWFLAKE_DATABASE', 'HEALTHCARE_CLAIMS') }}"
+    schema: RAW
+    description: Raw healthcare claims files loaded from the ingestion layer.
+    tables:
+      - name: claims
+        description: Raw claim transactions.
+      - name: patients
+        description: Patient demographics.
+      - name: providers
+        description: Provider reference data.
+      - name: diagnosis_codes
+        description: ICD diagnosis reference data.
