@@ -6,15 +6,19 @@
 [![dbt](https://img.shields.io/badge/dbt-Snowflake-purple)](#dbt-and-snowflake)
 [![CI](https://img.shields.io/badge/CI-pytest-green)](.github/workflows/ci.yml)
 
-Production-style healthcare claims analytics project built to demonstrate modern Data Engineering skills: Python, PySpark, Airflow, Snowflake, dbt, automated data quality checks, and dimensional reporting.
+Production-style healthcare claims analytics project built to demonstrate modern data engineering and AI-ready analytics skills: Python, PySpark, Airflow, Snowflake, dbt, automated data quality checks, dimensional reporting, and stakeholder-facing documentation.
 
 This project models a payer analytics workflow where raw claim extracts are validated, enriched, transformed through a medallion architecture, and published into BI-ready gold tables for cost, utilization, provider, diagnosis, geography, and trend reporting.
 
+For the Claude Corps Fellowship, this project shows how reliable data infrastructure can support public-interest healthcare teams: trusted claims data, explainable KPIs, faster reporting, and potential AI-assisted summaries for nontechnical stakeholders.
+
 ![Claims executive dashboard mockup](screenshots/claims-executive-dashboard.svg)
 
-## Why This Project Matters
+## Business Impact
 
 Healthcare payers rely on accurate claims data to monitor spend, reduce leakage, evaluate provider performance, and identify operational risk. A broken claim pipeline can create incorrect financial reporting, missed denial trends, and delayed business decisions.
+
+In a nonprofit clinic, public health program, or payer operations team, the same pattern could help staff answer practical questions: which services are driving cost, where denials are increasing, which providers need follow-up, and which trends need leadership attention. The goal is not just to move data; it is to make operational decisions clearer and more trustworthy.
 
 This repository shows how I would build a small but realistic version of that system:
 
@@ -123,6 +127,56 @@ The gold layer is designed to answer common payer analytics questions:
 | Out-of-network spend | Approved or paid claim amount from out-of-network providers | How much leakage is occurring outside contracted networks? |
 | Diagnosis category spend | Claim amount grouped by diagnosis_category | Which clinical categories drive the largest spend? |
 | State-level spend | Claim amount grouped by claim_state | Which geographies need cost management attention? |
+
+## Results and Impact
+
+This repository demonstrates end-to-end ownership of a healthcare data product:
+
+- Built ingestion, validation, transformation, warehouse modeling, and reporting layers.
+- Added data quality checks before records reach analytics models.
+- Created dbt models and tests for repeatable, documented warehouse logic.
+- Included dashboard mockups so technical outputs connect to stakeholder decisions.
+- Documented setup, architecture, data model, business metrics, and Snowflake design.
+
+Expected stakeholder impact:
+
+- Finance teams can reconcile approved, paid, denied, and pending claim exposure.
+- Provider operations teams can identify high-cost providers and out-of-network leakage.
+- Clinical analytics teams can monitor spend by diagnosis category and geography.
+- Data teams can trace each metric from dashboard output back to raw source fields and tests.
+
+## AI Extension: Claude for Healthcare Analytics
+
+This pipeline creates structured, tested gold tables that an AI assistant like Claude could use to help stakeholders understand healthcare operations without writing SQL.
+
+Potential Claude workflows:
+
+- Explain KPI changes: answer questions such as "Why did denial rate increase this month?" using claim status, provider, diagnosis, and state-level marts.
+- Summarize anomalies: identify unusual cost spikes, pending exposure, or out-of-network spend and generate a plain-language summary.
+- Generate reports: draft weekly executive summaries for finance, provider operations, or care management teams.
+- Support self-service analytics: help nontechnical users ask questions about claims trends while grounding answers in curated dbt models.
+- Improve communication: translate technical data quality failures into action items for operations teams.
+
+Responsible AI guardrails:
+
+- Use synthetic or de-identified data only.
+- Ground generated explanations in documented metrics and tested dbt models.
+- Show source tables and assumptions with every AI-generated summary.
+- Keep human review in the loop before operational or care-related decisions.
+
+```mermaid
+flowchart LR
+    Gold["Gold marts<br/>claims, providers, diagnosis, monthly KPIs"] --> Metrics["Tested business metrics"]
+    Metrics --> Claude["Claude analytics assistant"]
+    Claude --> Explain["Explain KPI changes"]
+    Claude --> Summarize["Summarize anomalies"]
+    Claude --> Reports["Generate stakeholder reports"]
+    Claude --> Questions["Answer plain-language questions"]
+    Explain --> Review["Human review and decision-making"]
+    Summarize --> Review
+    Reports --> Review
+    Questions --> Review
+```
 
 ## Dashboard Mockups
 
@@ -282,10 +336,6 @@ Example impact narrative:
 - Designed medallion architecture with raw, silver, and gold layers for claims analytics.
 - Implemented data quality checks for schema validation, duplicate detection, referential integrity, and claim amount validation.
 - Developed dbt models for provider, diagnosis, state, and monthly claims reporting.
-
-## Senior Data Engineer Review Notes
-
-The repository has been reviewed for portfolio credibility. The current version avoids placeholder-only artifacts by including runnable ingestion, tests, dbt models, Snowflake DDL, audit records, medallion documentation, dashboard mockups, and business metric definitions. Generated runtime outputs are ignored so the repository remains clean when uploaded to GitHub.
 
 ## Documentation
 
